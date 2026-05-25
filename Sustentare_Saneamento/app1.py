@@ -27,15 +27,14 @@ app.layout = html.Div([
                  options = ["DIURNO","NOTURNO"],
                  value = ["DIURNO"],
                  inline = True,
-                 style={"width": "400px","fontSize": "14px","justifyContent": "center","border": "1px solid black"})]),
+                 style={"width": "400px","fontSize": "14px","justifyContent": "center"})]),
     
     html.Div([html.H4("filtro_de_dia", style = {"marginBottom": "5px"}),
               dcc.Checklist(id = "dia_semana", 
                  options = ["seg","ter","qua","qui","sex","sab"],
                  value = ["seg","qua","sex"],
-                 inline = True,
-                 style={"width": "400px","fontSize": "14px","justifyContent": "center","border": "1px solid black"})], 
-             style = {"border": "1px solid black", "marginTop":"20px"}),
+                 inline = True)], 
+                 style = {"border": "1px solid black", "marginTop":"30px", "textAlign": "center", "width":"350px"}),
     
     html.Div([html.H4("filtro_de_data"),
               dcc.DatePickerRange(id = "filtro_data",
